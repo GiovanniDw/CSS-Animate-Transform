@@ -1,0 +1,243 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+svg {
+	width: 100%;
+	height: 100%;
+}
+
+main > section > div,
+main > div > div {
+	width: 3rem;
+	height: 3rem;
+	position: absolute;
+}
+
+main > section > div > div,
+main > div > div > div
+ {
+	width: 50%;
+	position:absolute;
+	left: 25%;
+	top: 25%;
+	padding-bottom: 50%;
+	border-radius: 50%;
+	background: url("images/vogel.svg") no-repeat center center /contain ;
+}
+
+main {
+	position: relative;
+	height: 100vh;
+	margin: 0;
+}
+
+main > section > div:nth-of-type(1) {
+	top: 3rem;
+}
+
+main > section > div:nth-of-type(2) {
+	top: 6rem;
+}
+
+main > section > div:nth-of-type(3) {
+	top: 9rem;
+}
+
+main > section > div:nth-of-type(4) {
+	top: 12rem;
+}
+
+main > section > div:nth-of-type(5) {
+	top: 15rem;
+}
+
+main > div > input:checked ~ div:nth-of-type(1) {
+	animation: slideNegative 3s ease-in-out infinite;
+}
+main > div > input:checked ~ div:nth-of-type(2) {
+	animation: slideNegative 3s -0.25s ease-in-out infinite;
+}
+main > div > input:checked ~ div:nth-of-type(3) {
+	animation: slideNegative 3s -0.5s ease-in-out infinite;
+}
+main > div > input:checked ~ div:nth-of-type(4) {
+	animation: slideNegative 3s -0.75s ease-in-out infinite;
+}
+main > div > input:checked ~ div:nth-of-type(5) {
+	animation: slideNegative 3s -1s ease-in-out infinite;
+}
+
+main > div > input:checked ~ div:nth-of-type(1) > div{
+	animation: grow 3s ease-in-out infinite;
+}
+main > div > input:checked ~ div:nth-of-type(2) > div {
+	animation: grow 3s -0.25s ease-in-out infinite;
+}
+main > div > input:checked ~ div:nth-of-type(3) > div {
+	animation: grow 3s -0.5s ease-in-out infinite;
+}
+main > div > input:checked ~ div:nth-of-type(4) > div {
+	animation: grow 3s -0.75s ease-in-out infinite;
+}
+main > div > input:checked ~ div:nth-of-type(5) > div {
+	animation: grow 3s -1s ease-in-out infinite;
+}
+
+main > section > input:checked ~ div:nth-of-type(1) > div {
+	animation: grow 3s ease-in-out infinite;
+}
+
+main > section > input:checked ~ div:nth-of-type(2) > div {
+	animation: grow 3s 0.25s ease-in-out infinite;
+}
+
+main > section > input:checked ~ div:nth-of-type(3) > div {
+	animation: grow 3s 0.5s ease-in-out infinite;
+}
+
+main > section > input:checked ~ div:nth-of-type(4) > div {
+	animation: grow 3s 0.75s ease-in-out infinite;
+}
+
+main > section > input:checked ~ div:nth-of-type(5) > div {
+	animation: grow 3s 1s ease-in-out infinite;
+}
+
+main > section > input:checked ~ div:nth-of-type(1) {
+	animation: slidePositive 3s ease-in-out infinite;
+}
+
+main > section > input:checked ~ div:nth-of-type(2) {
+	animation: slidePositive 3s 0.25s ease-in-out infinite;
+}
+
+main > section > input:checked ~ div:nth-of-type(3) {
+	animation: slidePositive 3s 0.5s ease-in-out infinite;
+}
+
+main > section > input:checked ~ div:nth-of-type(4) {
+	animation: slidePositive 3s 0.75s ease-in-out infinite;
+}
+
+main > section > input:checked ~ div:nth-of-type(5) {
+	animation: slidePositive 3s 1s ease-in-out infinite;
+}
+
+/* main > div > div:nth-of-type(1) {
+	animation: slideNegative 3s ease-in-out infinite;
+}
+main > div > div:nth-of-type(2) {
+	animation: slideNegative 3s -0.25s ease-in-out infinite;
+}
+main > div > div:nth-of-type(3) {
+	animation: slideNegative 3s -0.5s ease-in-out infinite;
+}
+main > div > div:nth-of-type(4) {
+	animation: slideNegative 3s -0.75s ease-in-out infinite;
+}
+main > div > div:nth-of-type(5) {
+	animation: slideNegative 3s -1s ease-in-out infinite;
+}
+
+main > div > div:nth-of-type(1) > div{
+	animation: grow 3s ease-in-out infinite;
+}
+main > div > div:nth-of-type(2) > div {
+	animation: grow 3s -0.25s ease-in-out infinite;
+}
+main > div > div:nth-of-type(3) > div {
+	animation: grow 3s -0.5s ease-in-out infinite;
+}
+main > div > div:nth-of-type(4) > div {
+	animation: grow 3s -0.75s ease-in-out infinite;
+}
+main > div > div:nth-of-type(5) > div {
+	animation: grow 3s -1s ease-in-out infinite;
+}
+
+main > section > div:nth-of-type(1) > div {
+	animation: grow 3s ease-in-out infinite;
+}
+
+main > section > div:nth-of-type(2) > div {
+	animation: grow 3s 0.25s ease-in-out infinite;
+}
+
+main > section > div:nth-of-type(3) > div {
+	animation: grow 3s 0.5s ease-in-out infinite;
+}
+
+main > section > div:nth-of-type(4) > div {
+	animation: grow 3s 0.75s ease-in-out infinite;
+}
+
+main > section > div:nth-of-type(5) > div {
+	animation: grow 3s 1s ease-in-out infinite;
+}
+
+main > section > div:nth-of-type(1) {
+	animation: slidePositive 3s ease-in-out infinite;
+}
+
+main > section > div:nth-of-type(2) {
+	animation: slidePositive 3s 0.25s ease-in-out infinite;
+}
+
+main > section > div:nth-of-type(3) {
+	animation: slidePositive 3s 0.5s ease-in-out infinite;
+}
+
+main > section > div:nth-of-type(4) {
+	animation: slidePositive 3s 0.75s ease-in-out infinite;
+}
+
+main > section > div:nth-of-type(5) {
+	animation: slidePositive 3s 1s ease-in-out infinite;
+} */
+
+
+main > div > div:nth-of-type(1) {
+	top: 3rem;
+}
+
+main > div > div:nth-of-type(2) {
+	top: 6rem;
+}
+
+main > div > div:nth-of-type(3) {
+	top: 9rem;
+}
+
+main > div > div:nth-of-type(4) {
+	top: 12rem;
+}
+
+main > div > div:nth-of-type(5) {
+	top: 15rem;
+}
+
+@keyframes slidePositive {
+	0% { left:0; transform-origin: right; transform: rotateY(180deg); animation-fill-mode: forwards; }
+	50% { left:75%; transform-origin:bottom; transform:translateX(200px) rotateX(180deg); }
+	100% { left:0; transform-origin: right; transform: rotateY(180deg); animation-fill-mode: forwards; }
+}
+
+@keyframes slideNegative {
+	0% { left:0; transform-origin: right; transform: rotateY(180deg); animation-fill-mode: forwards; }
+	50% { left:75%; transform-origin:bottom; transform:translateX(200px) rotateX(180deg); }
+	100% { left:0; transform-origin: right; transform: rotateY(180deg); animation-fill-mode: forwards; }
+}
+
+@keyframes grow {
+	0% { margin-top: 0; height: 0; }
+	25% {  margin-top: -12.5%; height: 12.5%; }
+	50% { margin-top: 0; height: 0; }
+	75% {  margin-top: 12.5%; height: -12.5%;  }
+	100% { margin-top: 0; height: 0; }
+}
