@@ -2,26 +2,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 32px;
+    font-size: 17px;
     background-color: #EBB250;
 }
 
 body {
+    width: 100%;
+}
+
+div {
     height: 100vh;
     width: 100%;
     background-image: url("./images/wave-primary.svg"), url("./images/wave.svg");
     background-repeat: no-repeat;
-    background-size: 65%,68%;
+    background-size: 65%, 68%;
+    transition: all 3s ease-in-out;
     background-position: 130% 15%, 128% 15%;
-    animation: wave 3s cubic-bezier(0.28,0,0.41,1) infinite;
+    animation: wave 3s cubic-bezier(0.28, 0, 0.41, 1) infinite forwards;
     overflow: hidden;
     position: relative;
+    z-index: 99;
 
 }
 
 
-body::before,
-body::after {
+div::before,
+div::after {
     content: "";
     position: absolute;
     background-image: url(https://png.pngtree.com/png-vector/20201105/ourmid/pngtree-crab-clipart-clip-art-style-cartoon-vector-crab-png-image_2395919.jpg);
@@ -29,32 +35,27 @@ body::after {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    animation: particle-move 5s ease-in-out infinite;
+    animation: particle-move 5s ease-in-out infinite forwards;
     top: 50%;
-
+    z-index: 100;
 }
-
-
-@keyframes particle-move {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(100%, 100%) rotate(360deg);
-
-    }
-}
-
 
 /* multiple particles */
-body::before {
+div::before {
     left: 20%;
+
 }
 
-body::after {
+div::after {
     background-image: url("./images/dolphin.png");
     background-size: cover;
     left: 80%;
+}
+
+#cb1:checked + div {
+    /*animation: wave_flood 5s cubic-bezier(0.28, 0, 0.41, 1) both;*/
+    background-size: 75%, 130%;
+
 }
 
 
@@ -68,4 +69,27 @@ body::after {
 
     }
 }
+
+@keyframes wave_flood {
+    100% {
+        background-size: 75%, 130%;
+    }
+}
+
+
+@keyframes particle-move {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(100%, 100%) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+
+
+
 
