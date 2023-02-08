@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 32px;
+    background-color: #EBB250;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url("./images/wave-primary.svg"), url("./images/wave.svg");
+    background-repeat: no-repeat;
+    background-size: 65%,68%;
+    background-position: 130% 15%, 128% 15%;
+    animation: wave 3s cubic-bezier(0.28,0,0.41,1) infinite;
+    overflow: hidden;
+    position: relative;
+
+}
+
+
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    background-image: url(https://png.pngtree.com/png-vector/20201105/ourmid/pngtree-crab-clipart-clip-art-style-cartoon-vector-crab-png-image_2395919.jpg);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: particle-move 5s ease-in-out infinite;
+    top: 50%;
+
+}
+
+
+@keyframes particle-move {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(100%, 100%) rotate(360deg);
+
+    }
+}
+
+
+/* multiple particles */
+body::before {
+    left: 20%;
+}
+
+body::after {
+    background-image: url("./images/dolphin.png");
+    background-size: cover;
+    left: 80%;
+}
+
+
+
+@keyframes wave {
+    0%, 100% {
+        background-position-x: 130%;
+    }
+    60% {
+        background-position-x: 140%;
+
+    }
+}
+
