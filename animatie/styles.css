@@ -15,7 +15,7 @@ section img {
     position: absolute;
     offset-path: path("M18.45,58.46s52.87-70.07,101.25-.75,101.75-6.23,101.75-6.23S246.38,5.59,165.33,9.08s-15,71.57-94.51,74.56S18.45,58.46,18.45,58.46Z");
     animation: move 6s infinite alternate ease-in-out;
-} 
+}
 
 
  @keyframes move {
@@ -23,7 +23,7 @@ section img {
         offset-distance: 0%;
     }
     5% {
-       
+
     }
     45% {
         transform:rotateY(180deg);
@@ -39,4 +39,4 @@ section img {
         offset-distance: 0%;
         transform:rotateY(90deg);
     }
-} 
+}
