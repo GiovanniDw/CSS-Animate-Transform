@@ -2,13 +2,13 @@
 .potl {
   perspective-origin: 0% 0%;
   transition-duration: 500ms;
-   animation-name: spinner; 
+   /* animation-name: spinner;  */
   animation-timing-function: linear; 
   animation-iteration-count: infinite; 
   animation-duration: 4s; 
 }
 .potl :hover {
-perspective-origin: 100% 100%;
+perspective-origin: center;
 
 }
 .potm {
@@ -68,16 +68,17 @@ perspective-origin: -200% -100%;
   transform-style: preserve-3d;
   transform: rotate3d(0, 0, 0, 0deg);
   transition-duration: 1000ms;
-  animation-name: spinner; 
+  /* animation-name: spinner;  */
   animation-timing-function: linear; 
   animation-iteration-count: infinite; 
   animation-duration: 4s; 
+  
 }
 
 .cube:hover {
-  
-    transform: rotate3d(0, -1, -0.5, -3.142rad);
-}
+  perspective-origin: 120% 120%;
+
+  }
 
 .face {
   display: block;
@@ -90,42 +91,52 @@ perspective-origin: -200% -100%;
   font-size: 60px;
   color: white;
   text-align: center;
+    background-size: cover;
+
 }
 
 /* Define each face based on direction */
 .front {
   /* background: rgba(0, 0, 0, 0.3); */
   transform: translateZ(50px);
-  background-image: url(./images/cube-4.png);
+  background-image: url(./images/top.png);
   background-size: cover;
   /* height: 100px; */
   /* width: 100px; */
 
 }
 .back {
-  background: rgba(0, 255, 0, 1);
+  /* background: rgba(0, 255, 0, 1); */
   color: black;
+  background: url(./images/bottom.png);
   transform: rotateY(180deg) translateZ(50px);
+  background-size: cover;
 }
 .right {
-  background: rgba(196, 0, 0, 0.7);
+  background-image: url(./images/Side.png);
+  /* background: rgba(196, 0, 0, 0.7); */
   transform: rotateY(90deg) translateZ(50px);
+  background-size: cover;
 }
 .left {
   background: rgba(0, 0, 196, 0.7);
   transform: rotateY(-90deg) translateZ(50px);
-    background-image: url(./images/cube-2.png);
+  background-image: url(./images/Side.png);
+    /* background-image: url(./images/cube-2.png); */
   background-size: cover;
 }
 .top {
   background: rgba(196, 196, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
-  background-image: url(./images/cube-3.png);
+  background-image: url(./images/Side.png);
+  /* background-image: url(./images/cube-3.png); */
   background-size: cover;
 }
 .bottom {
   background: rgba(196, 0, 196, 0.7);
+  background-image: url(./images/Side.png);
   transform: rotateX(-90deg) translateZ(50px);
+  background-size: cover;
 }
 
 /* Make the layout a little nicer */
