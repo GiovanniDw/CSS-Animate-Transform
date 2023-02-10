@@ -2,14 +2,13 @@
 .potl {
   perspective-origin: 0% 0%;
   transition-duration: 500ms;
-   /* animation-name: spinner;  */
-  animation-timing-function: linear; 
-  animation-iteration-count: infinite; 
-  animation-duration: 4s; 
+  /* animation-name: spinner;  */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
 }
 .potl :hover {
-perspective-origin: center;
-
+  perspective-origin: center;
 }
 .potm {
   perspective-origin: top;
@@ -42,14 +41,16 @@ perspective-origin: center;
   perspective-origin: 200% 200%;
 }
 .po200200 {
-
   transition-duration: 500ms;
   perspective-origin: 50% 50%;
 }
 
 .po200200:hover {
-perspective-origin: 200% 100%;
+  perspective-origin: 200% 100%;
+}
 
+body {
+  background-color: #eab24f;
 }
 
 /* Define the container div, the cube div, and a generic face */
@@ -58,6 +59,12 @@ perspective-origin: 200% 100%;
   height: 100px;
   margin: 24px;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 10em;
+  background-color: #eab24f;
 }
 
 .cube {
@@ -68,17 +75,10 @@ perspective-origin: 200% 100%;
   transform-style: preserve-3d;
   transform: rotate3d(0, 0, 0, 0deg);
   transition-duration: 1000ms;
-  /* animation-name: spinner;  */
-  animation-timing-function: linear; 
-  animation-iteration-count: infinite; 
-  animation-duration: 4s; 
-  
 }
-
 .cube:hover {
-  perspective-origin: 220% 220%;
-
-  }
+  perspective-origin: -120% -220%;
+}
 
 .face {
   display: block;
@@ -86,84 +86,55 @@ perspective-origin: 200% 100%;
   width: 100px;
   height: 100px;
   border: none;
-  line-height: 100px;
-  font-family: sans-serif;
-  font-size: 60px;
-  color: white;
-  text-align: center;
-    background-size: cover;
-
+  background-size: cover;
 }
 
-/* Define each face based on direction */
 .front {
-  /* background: rgba(0, 0, 0, 0.3); */
   transform: translateZ(50px);
   background-image: url(./images/top.png);
-  background-size: cover;
-  /* height: 100px; */
-  /* width: 100px; */
-
 }
 .back {
-  /* background: rgba(0, 255, 0, 1); */
-  color: black;
   background: url(./images/bottom.png);
   transform: rotateY(180deg) translateZ(50px);
   background-size: cover;
 }
 .right {
   background-image: url(./images/Side.png);
-  /* background: rgba(196, 0, 0, 0.7); */
   transform: rotateY(90deg) translateZ(50px);
-  background-size: cover;
 }
 .left {
-  background: rgba(0, 0, 196, 0.7);
   transform: rotateY(-90deg) translateZ(50px);
   background-image: url(./images/Side.png);
-    /* background-image: url(./images/cube-2.png); */
-  background-size: cover;
 }
 .top {
-  background: rgba(196, 196, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
   background-image: url(./images/Side.png);
-  /* background-image: url(./images/cube-3.png); */
-  background-size: cover;
 }
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
   background-image: url(./images/Side.png);
   transform: rotateX(-90deg) translateZ(50px);
-  background-size: cover;
 }
 
 /* Make the layout a little nicer */
 
-
-
-@-webkit-keyframes spinner { 
-  from 
-  { 
-    -webkit-transform: rotateY(0deg); 
-  } 
-  to { 
-    -webkit-transform: rotateY(-360deg); 
-  } 
-} 
-/* all other browsers */ 
-@keyframes spinner { 
-   from { 
-    -moz-transform: rotateY(0deg); 
-    -ms-transform: rotateY(0deg); 
-    transform: rotateY(0deg); 
-   } 
-   to 
-   { 
-    -moz-transform: rotateY(-360deg); 
-    -ms-transform: rotateY(-360deg); 
-    transform: rotateY(-360deg); 
-
-   } 
+@-webkit-keyframes spinner {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg);
+  }
+}
+/* all other browsers */
+@keyframes spinner {
+  from {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
 }
